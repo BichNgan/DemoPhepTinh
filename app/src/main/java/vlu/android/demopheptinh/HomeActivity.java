@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button btn1;
+    Button btn1, btnLab2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
     void addControl()
     {
         btn1=(Button) findViewById(R.id.btn1);
+        btnLab2=(Button) findViewById(R.id.btnLab2);
 
     }
     void addEvent()
@@ -29,6 +30,13 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnLab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),Lab2Demo.class);
                 startActivity(intent);
             }
         });
