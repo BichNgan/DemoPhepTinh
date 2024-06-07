@@ -15,6 +15,21 @@
         android:background="#C3ECE8"
          />
 
+    <EditText
+        android:id="@+id/edtTC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="10pt"
+        android:inputType="textPersonName"
+        android:hint="Trái cây" />
+
+    <Button
+        android:id="@+id/btnThem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm item" />
+
     <ListView
         android:id="@+id/lvTraiCay"
         android:layout_width="match_parent"
