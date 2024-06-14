@@ -106,4 +106,9 @@ public class Lab2_1 extends AppCompatActivity {
         });
         return builder.create();
     }
+
+    void aa()
+    {
+
+    }
 }
