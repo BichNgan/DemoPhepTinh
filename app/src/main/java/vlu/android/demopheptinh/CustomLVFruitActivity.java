@@ -30,7 +30,6 @@ public class CustomLVFruitActivity extends AppCompatActivity {
         addControl();
         //Đưa dữ liệu vào arrayTraiCay của listView
         createDataForListView(arrayIdAnh,arrayTen,arrayGia);
-
         customAdapterFruit = new CustomAdapterFruit(getApplicationContext(),
                 R.layout.layout_item_custom_listview_fruit,arrayListTraiCay);
         lvTraiCay.setAdapter(customAdapterFruit);
