@@ -84,9 +84,7 @@ public class Lab2_1 extends AppCompatActivity {
                 return false;
             }
         });
-
     }
-
     //Hiển thị Dialog xác nhận trước khi xóa item
     private AlertDialog createAlertDialog (int position, ArrayAdapter<String> adapter)
     {

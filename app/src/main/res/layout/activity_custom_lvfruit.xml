@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CustomLVFruitActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C4EAE6"
+        android:textSize="15pt"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#DA1370"
+        android:text="DANH SÁCH TRÁI CÂY" />
+
+    <TextView
+        android:id="@+id/tvChonTC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D0CAED"
+        android:textSize="15pt"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:text="Kết quả chọn là: " />
+
+    <ListView
+        android:id="@+id/lvTC"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
