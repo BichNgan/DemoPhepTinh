@@ -1,7 +1,9 @@
 package vlu.android.demopheptinh;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -63,6 +65,7 @@ public class Lab2_1 extends AppCompatActivity {
             }
         });
 
+        //Thêm 1 item vao listview
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,5 +75,37 @@ public class Lab2_1 extends AppCompatActivity {
             }
         });
 
+        //XÓa 1 item trong listView
+        lvTraiCay.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialog alertDialog = createAlertDialog(position,arrayAdapter);
+                alertDialog.show();
+                return false;
+            }
+        });
+
+    }
+
+    //Hiển thị Dialog xác nhận trước khi xóa item
+    private AlertDialog createAlertDialog (int position, ArrayAdapter<String> adapter)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Lab2_1.this);
+        builder.setTitle("Delete an Intem");
+        builder.setMessage("Are you sure to want to delete this item?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                lvData.remove(position);
+                adapter.notifyDataSetChanged();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        return builder.create();
     }
 }
