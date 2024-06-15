@@ -47,7 +47,7 @@ public class CustomAdaperSpinnerTC extends BaseAdapter {
         tenTC.setText(tc.getTenTC());
 
         TextView giaTC = (TextView) convertView.findViewById(R.id.tvGiaTC);
-        giaTC.setText(tc.getGiaTC());
+        giaTC.setText(String.valueOf(tc.getGiaTC()));
         return convertView;
     }
 }
